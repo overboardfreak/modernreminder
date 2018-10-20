@@ -1,0 +1,77 @@
+body{
+	background-image: url("wall.jpg");
+	background-size: fixed;
+}
+ 
+.card-body{
+	background-image: url("https://images.unsplash.com/photo-1506143925201-0252c51780b0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4df73c9d1ccc60fef7374661670aaa87&auto=format&fit=crop&w=675&q=80");
+	padding:none;
+	/*color: white;*/
+	background-size:cover;
+	background-repeat: no-repeat;
+	/*background-position: center ;*/
+	min-height: 300px
+}
+
+.nav-link{
+	color: white;
+	margin-bottom: 5px;
+	font-size: 15px;
+	font-weight: 500;
+}
+.nav-item:hover {
+	color: white;
+	border-bottom: 3px solid white;
+}
+.lead {
+	font-family: Arial, Helvetica, sans-serif;
+	color:#333;
+}
+.progress{
+	margin:50px;
+}
+
+.progress-bar{
+	background: #333
+}
+
+.button{
+	background-color:white;
+	color:#000;
+	padding:10px 15px;
+	border:none;
+
+}
+.button:hover{
+	background:red;
+	color:#fff;
+}
+
+a{
+	text-decoration: none;
+	color:#000;
+}
+
+
+a:hover{
+	text-decoration: none;
+	color:red;
+}
+
+.fix-me{
+	position:fixed;
+	top:350px;
+}
+
+#main-footer{
+	color:#fff;
+	font-size: 30px
+	text-align: center;
+}
+
+.copy {
+	color: black;
+	font-size: 25px;
+	text-align: center;
+}
+

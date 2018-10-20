@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Checklist</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+	</head>
+	<body>
+		<br>
+		<br>
+		<ul class="nav justify-content-end">
+			<li class="nav-item">
+				<a class="nav-link" href="/">Home</a>
+			</li>
+				<a class="nav-link" href="logout/">Logout</a>
+			</li>
+			<!-- <li class="nav-item">
+			<li class="nav-item">
+				<a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled" href="#">Disabled</a>
+			</li> -->
+		</ul>
+		<div class="container">
+		<h2>Your reminders </h2>
+			{% for checklist in checklists %}		{# % is for logical statements and {} is for datastatements#}
+				<div class="card" style="width: 18rem; display: inline-block; vertical-align:top">
+					<div class="card-body">
+						<h3 class="card-title">{{checklist.name}}</h3>
+						<p class="card-text">{{checklist.time}}</p>
+						<a href="/checklist/{{checklist.id}}" class="btn btn-primary">View Reminder</a>
+					</div>
+				</div>
+			{% endfor %}
+			
+		</div>
+		<br>
+		<br>
+		<div class="container">
+			<a href="/checklist/new" class="btn btn-success btn-lg">Add Reminder</a>
+			
+		</div>
+		
+	</body>
+</html>
