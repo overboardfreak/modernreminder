@@ -14,7 +14,7 @@ urlpatterns = [
 	path('main/',views.main),
 	path('dashboard/', views.dashboard),
 
-	path('checklist/<int:check_id>',views.checklist_view),
+	path('checklist/<int:check_id>/',views.checklist_view),
 
 	path('delete/<int:id>/',views.delete_checklist),
 
