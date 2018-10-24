@@ -6,14 +6,19 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 	# path('admin/', admin.site.urls),
-	path('',views.home),
+	path('',views.home_page),
 	path('logout/',views.logout_view),
 	path('signup/',views.signup),
 	path('login/', views.signin),
+
 	path('main/',views.main),
-	path('checklist/',views.checklist),
-	path('checklist/<int:check_id>',views.my_checklist),
-	path('delete/<int:id>/',views.delete),
-	path('checklist/<int:pk>/edit/', views.checklist_edit),
-	path('checklist/new', views.new,),
+	path('dashboard/', views.dashboard),
+
+	path('checklist/<int:check_id>',views.checklist_view),
+
+	path('delete/<int:id>/',views.delete_checklist),
+
+	path('checklist/<int:pk>/edit/', views.edit_checklist),
+
+	path('checklist/new/', views.new,),
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
