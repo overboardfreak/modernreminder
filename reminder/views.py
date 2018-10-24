@@ -87,7 +87,7 @@ def edit_checklist(request, pk):
 		checklist.time=time
 		checklist.day=day 
 		checklist.save()
-		return redirect('/checklist')   
+		return redirect('/dashboard/')   
 	# checklists = Checklist.objects.all()
 	return render(request,"edit.html",{'checklist': checklist})
 
