@@ -1,13 +1,23 @@
 {% extends 'base.html' %}
+{%load static%}
+
 {% block meta %}
 	<style type="text/css" media="screen">
 		/* Put your css for this page here */
 	</style>
 {% endblock %}
 {% block body %}
-	<div class="container">
-		
-		{# Put your homepage content here #}
-		
-	</div>
+	<section id="home" >
+		<body background="{% static 'img/back.jpg' %}" style="background-size:cover">
+			<div class="row">
+
+			<div class=" col-lg-6 jumbotron jumbotron" style="margin-left: 50px"; >
+				<div class="container">
+					<h1 class="display-4">Modern Reminder</h1>
+					<p class="lead">The Only Reminder You Need! 
+				</div>
+			</div>
+			</div>
+		</body>
+	</section>
 {% endblock %}
